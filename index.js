@@ -1,11 +1,5 @@
-import JsonSocket from "./lib/JsonSocket.js";
+import JSONSocket from "./lib/JSONSocket.js";
 
-export default JsonSocket
-
-export function modify(socket, messageDelimiter) {
-    return new JsonSocket(socket, messageDelimiter, true).socket
-}
-
-export function decorate(socket, messageDelimiter) { //todo add internal EE
-    return new JsonSocket(socket, messageDelimiter, false)
-}
+export default JSONSocket
+export const modify = JSONSocket.modify
+export const decorate = JSONSocket.decorate
